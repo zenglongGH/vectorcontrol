@@ -1068,6 +1068,7 @@ int main(void) {
     g_current_controller and g_speed_controller, since they're updated from
     the ISRs and not declared volatile.
     */
+    //向AD完成中断中加入位置估算器
     hal_set_high_frequency_callback(control_cb);
 
     node_id = hal_get_can_node_id();
